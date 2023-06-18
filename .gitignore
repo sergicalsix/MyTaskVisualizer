@@ -1,0 +1,4 @@
+book/not_*
+book/books.py
+__pycache__
+*/__pycache
