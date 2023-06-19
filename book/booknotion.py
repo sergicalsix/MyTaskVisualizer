@@ -3,7 +3,7 @@ Documents: https://www.python-engineer.com/posts/notion-api-python/
 INTEGRATION: https://www.notion.so/my-integrations
 DATABASE_ID: https://booknotion.site/setting-databaseid
 
-exaample data_format
+example data_format
 {
 '📎  Media': {'id': 'IiHm', 'type': 'files', 'files': []}, 
 '📙  Book Title': {'id': 'OVh%7B', 'type': 'select', 'select': {'id': '1cd38ed4-888e-46a4-bb55-4c9033c6a55f', 'name': '「超」メタ思考 頭がよくなる最強トレーニング57連発', 'color': 'blue'}}, 
@@ -57,16 +57,16 @@ weekly_memos = weekly_memos[:-1] #文末の\nを削除
 
 message = f"""あなたの読書記録は以下です。
 
-今週: {len(set(weekly_titles))}
-今月: {len(set(monthly_titles))}
-今年: {len(set(yearly_titles))}
+今週: {len(set(weekly_titles))}冊
+今月: {len(set(monthly_titles))}冊
+今年: {len(set(yearly_titles))}冊
 
 あなたの今週の気づきは以下です。
 
 {weekly_memos}
 """
 
-print(message)
+print(message) 
 send_slack_message(text=message)
 print("Success!!")
 
