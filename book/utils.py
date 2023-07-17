@@ -3,8 +3,6 @@ import os
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
-
-
 def send_slack_message(text = "Hello from your app! :tada:", channel = "random"):
 
     slack_token = os.environ["SLACK_API_TOKEN"]
